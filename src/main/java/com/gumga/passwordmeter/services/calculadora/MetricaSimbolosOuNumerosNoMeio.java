@@ -8,7 +8,7 @@ public class MetricaSimbolosOuNumerosNoMeio implements CalculadoraMetricas {
 	private final ContadorCaracteres contador;
 
 	public MetricaSimbolosOuNumerosNoMeio() {
-		contador = new ContadorCaracteres("'!@#$%&*()_+-=[{]};:?<>.,ÁÀÃÂÄÇÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜáàãâäçéèêëíìîïóòõôöúùûü" + "0123456789");
+		contador = new ContadorCaracteres("'!@#$%¨&*()+-=`´[]{}~^/?;:<>.,\\|\"" + "ÁÀÃÂÄÇÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜ" + "áàãâäçéèêëíìîïóòõôöúùûü" + "0123456789");
 	}
 	
 	@Override

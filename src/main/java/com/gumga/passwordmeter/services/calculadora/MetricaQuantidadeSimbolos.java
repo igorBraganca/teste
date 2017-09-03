@@ -9,7 +9,7 @@ public class MetricaQuantidadeSimbolos implements CalculadoraMetricas {
 	private final ContadorCaracteres contador;
 
 	public MetricaQuantidadeSimbolos() {
-		contador = new ContadorCaracteres("'!@#$%&*()_+-=[{]};:?<>.,ÁÀÃÂÄÇÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜáàãâäçéèêëíìîïóòõôöúùûü");
+		contador = new ContadorCaracteres("'!@#$%¨&*()+-=`´[]{}~^/?;:<>.,\\|\"" + "ÁÀÃÂÄÇÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜ" + "áàãâäçéèêëíìîïóòõôöúùûü");
 	}
 	
 	@Override

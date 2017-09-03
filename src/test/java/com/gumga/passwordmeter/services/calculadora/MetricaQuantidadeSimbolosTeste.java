@@ -19,18 +19,21 @@ public class MetricaQuantidadeSimbolosTeste {
 		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 6", 6, m.calcular(texto));
 
 		texto = "'!@#$%&*()_+-=[{]};:?<>.,";
-		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 150", 150, m.calcular(texto));
+		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 144", 144, m.calcular(texto));
 
 		texto = "'!gljhewrg@#$%&*(3412346)_+-=[{]};:?<>.JFU#R*&WED*&,";// 30 simbolos
-		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 180", 180, m.calcular(texto));
+		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 174", 174, m.calcular(texto));
 
 		texto = "'!@#$%&*()_+-=[{]};:?<>.,'!@#$%&*()_+-=[{]};:?<>.,";
-		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 300", 300, m.calcular(texto));
+		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 288", 288, m.calcular(texto));
 
 		texto = "A*A*A*A*A*A*A*A*A*A*A";
 		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 60", 60, m.calcular(texto));
 
 		texto = "**********";
 		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 60", 60, m.calcular(texto));
+		
+		texto = "****áéíÃÕÛ******";
+		Assert.assertEquals("6 x quantidade_simbolos(\"" + texto + "\") deve ser 96", 96, m.calcular(texto));
 	}
 }
