@@ -1,0 +1,20 @@
+.form {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(222, 222, 222);
+	border-radius: 5px;
+	padding: 15px 15px 15px 40px;
+	background-color: rgb(246, 246, 246);
+	margin-top: 10px;
+}
+
+input {
+	border: 1px solid rgb(222, 222, 222);
+	border-radius: 5px;
+	padding: 7px;
+	width: 250px;
+}
+
+.status-container {
+	margin-top: 5px;
+}
