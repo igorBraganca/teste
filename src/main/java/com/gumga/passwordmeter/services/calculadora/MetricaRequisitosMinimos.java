@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Qualifier("requesito-minimo")
 public class MetricaRequisitosMinimos implements CalculadoraMetricas {
 
+	private static final int PESO = 2;
 	private final CalculadoraMetricas tamanho = new MetricaTamanho();
 	private final CalculadoraMetricas upperCase = new MetricaQuantidadeCaracteresCaixaAlta();
 	private final CalculadoraMetricas lowerCase = new MetricaQuantidadeCaracteresCaixaBaixa();
@@ -38,7 +39,7 @@ public class MetricaRequisitosMinimos implements CalculadoraMetricas {
 		}
 		
 		if(tamanho.calcular(senha)/4 >= 8) {
-			return soma + 1;
+			return (soma + 1) * PESO;
 		} else {
 			return 0;
 		}
