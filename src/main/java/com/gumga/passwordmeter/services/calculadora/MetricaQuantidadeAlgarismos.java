@@ -11,7 +11,7 @@ public class MetricaQuantidadeAlgarismos implements CalculadoraMetricas {
 	private final ContadorCaracteres contador;
 
 	public MetricaQuantidadeAlgarismos() {
-		contador = new ContadorCaracteres("0123456789");
+		contador = new ContadorCaracteres(ListaCaracteres.ALGARISMOS);
 	}
 
 	@Override

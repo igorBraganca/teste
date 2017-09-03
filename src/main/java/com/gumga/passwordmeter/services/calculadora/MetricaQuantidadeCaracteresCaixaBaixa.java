@@ -11,7 +11,7 @@ public class MetricaQuantidadeCaracteresCaixaBaixa implements CalculadoraMetrica
 	private final ContadorCaracteres contador;
 
 	public MetricaQuantidadeCaracteresCaixaBaixa() {
-		contador = new ContadorCaracteres("abcdefghijklmnopqrstuvwxyz");
+		contador = new ContadorCaracteres(ListaCaracteres.CARACTERES_CAIXA_BAIXA);
 	}
 	
 	@Override

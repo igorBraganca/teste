@@ -7,12 +7,11 @@ import org.springframework.stereotype.Component;
 @Qualifier("metrica-condicionais")
 public class MetricaQuantidadeCaracteresCaixaAlta implements CalculadoraMetricas {
 
-	private static final String CARACTERES = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int PESO = 2;
 	private final ContadorCaracteres contador;
 
 	public MetricaQuantidadeCaracteresCaixaAlta() {
-		contador = new ContadorCaracteres(CARACTERES);
+		contador = new ContadorCaracteres(ListaCaracteres.CARACTERES_CAIXA_ALTA);
 	}
 	
 	@Override
