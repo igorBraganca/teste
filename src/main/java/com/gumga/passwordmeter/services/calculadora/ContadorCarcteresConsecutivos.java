@@ -13,14 +13,23 @@ public class ContadorCarcteresConsecutivos {
 	}
 
 	public int contarQuantidadeCaracteresConsecutivos(String texto) {
-		int quantidade = 0;
-
+		int consecutivo = 0;
+		int soma = 0;
+		
 		for (int i = 0; i < texto.length(); i++) {
-			if (caracteres.contains(String.valueOf(texto.charAt(i)))) {
-				quantidade++;
+			char c = texto.charAt(i);
+
+			if (caracteres.contains(String.valueOf(c))) {
+				if (consecutivo > 0) {
+					soma++;
+				}
+
+				consecutivo++;
+			} else {
+				consecutivo = 0;
 			}
 		}
-
-		return quantidade;
+		
+		return soma;
 	}
 }
