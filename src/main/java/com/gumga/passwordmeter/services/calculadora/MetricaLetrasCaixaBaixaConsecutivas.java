@@ -6,11 +6,11 @@ public class MetricaLetrasCaixaBaixaConsecutivas implements CalculadoraMetricas 
 	private final ContadorCarcteresConsecutivos contador;
 
 	public MetricaLetrasCaixaBaixaConsecutivas() {
-		contador = new ContadorCarcteresConsecutivos(ListaCaracteres.CARACTERES_CAIXA_BAIXA);
+		contador = new ContadorCarcteresConsecutivos(ListaCaracteres.CARACTERES_CAIXA_ALTA);
 	}
 
 	@Override
 	public int calcular(String senha) {
-		return contador.contarQuantidadeCaracteresConsecutivos(senha) * PESO;
+		return contador.contarQuantidadeCaracteresConsecutivos(senha) * PESO * -1;
 	}
 }
