@@ -1,5 +1,8 @@
 package com.gumga.passwordmeter.services.calculadora;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MetricaLetrasCaixaBaixaConsecutivas implements CalculadoraMetricas {
 
 	private static final int PESO = 2;
