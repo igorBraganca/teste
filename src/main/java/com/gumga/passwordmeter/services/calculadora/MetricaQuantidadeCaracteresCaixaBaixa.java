@@ -1,5 +1,10 @@
 package com.gumga.passwordmeter.services.calculadora;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("metrica-condicionais")
 public class MetricaQuantidadeCaracteresCaixaBaixa implements CalculadoraMetricas {
 	
 	private static final int PESO = 2;
