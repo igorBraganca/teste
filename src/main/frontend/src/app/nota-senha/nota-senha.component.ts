@@ -7,11 +7,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NotaSenhaComponent implements OnInit {
 
-  nota: string = "0";
+  private nota = '0';
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  setNota(nota: number) {
+    this.nota = '' + nota;
   }
 
+  getNota(): string {
+    return this.nota;
+  }
 }
