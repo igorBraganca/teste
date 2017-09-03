@@ -6,8 +6,8 @@ import org.junit.Test;
 public class MetricaLetrasCaixaAltaConsecutivasTeste {
 
 	@Test
-	public void deveRetornar2VezesQuantidadeDeLetrasCaixaBaixaConsecutivas() {
-		final CalculadoraMetricas m = new MetricaLetrasCaixaBaixaConsecutivas();
+	public void deveRetornar2VezesQuantidadeDeLetrasCaixaAltaConsecutivas() {
+		final CalculadoraMetricas m = new MetricaLetrasCaixaAltaConsecutivas();
 
 		String texto = "";
 		Assert.assertEquals("deve retornar 2 x a quantidade de letras caixa alta consecutivas para: \"" + texto + "\" resultado: 0", 0, m.calcular(texto));

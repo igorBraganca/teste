@@ -6,7 +6,7 @@ public class MetricaLetrasCaixaBaixaConsecutivas implements CalculadoraMetricas 
 	private final ContadorCarcteresConsecutivos contador;
 
 	public MetricaLetrasCaixaBaixaConsecutivas() {
-		contador = new ContadorCarcteresConsecutivos(ListaCaracteres.CARACTERES_CAIXA_ALTA);
+		contador = new ContadorCarcteresConsecutivos(ListaCaracteres.CARACTERES_CAIXA_BAIXA);
 	}
 
 	@Override
