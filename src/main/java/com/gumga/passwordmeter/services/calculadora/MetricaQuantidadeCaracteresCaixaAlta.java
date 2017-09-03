@@ -2,19 +2,22 @@ package com.gumga.passwordmeter.services.calculadora;
 
 public class MetricaQuantidadeCaracteresCaixaAlta implements CalculadoraMetricas {
 
-	private static final String CARACTERES = "AÁÀÃÂÄBCÇDEÉÈÊËFGHIÍÌÎÏJKLMNOÓÒÕÔÖPQRSTUÚÙÛÜVWXYZ";
+	private static final String CARACTERES = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int PESO = 2;
+	private final ContadorCaracteres contador;
 
+	public MetricaQuantidadeCaracteresCaixaAlta() {
+		contador = new ContadorCaracteres(CARACTERES);
+	}
+	
 	@Override
 	public int calcular(String senha) {
-		int quantidade = 0;
+		int quantidade = contador.contarQuantidadeCaracteres(senha);
 		
-		for (int i = 0; i < senha.length(); i++) {
-			if (CARACTERES.contains(String.valueOf(senha.charAt(i)))) {
-				quantidade++;
-			}
+		if(quantidade == 0) {
+			return 0;
 		}
-
+		
 		return (senha.length() - quantidade) * PESO;
 	}
 }

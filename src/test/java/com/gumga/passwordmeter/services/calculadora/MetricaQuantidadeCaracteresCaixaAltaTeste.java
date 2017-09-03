@@ -25,15 +25,15 @@ public class MetricaQuantidadeCaracteresCaixaAltaTeste {
 		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 2", 2, m.calcular(texto));
 		
 		texto = "AÁÀÃÂÄ";
-		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 0", 0, m.calcular(texto));
+		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 10", 10, m.calcular(texto));
 		
 		texto = "AÁÀÃÂÄ2w6w7gwerygseyvw45usbeysveuy";
-		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 12", 12, m.calcular(texto));
+		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 66", 66, m.calcular(texto));
 		
 		texto = "AÁÀÃÂÄBCÇDEÉÈÊËFGHIÍÌÎÏJKLMNOÓÒÕÔÖPQRSTUÚÙÛÜVWXYZ";
-		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 0", 0, m.calcular(texto));
+		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 46", 46, m.calcular(texto));
 		
 		texto = "AÁÀÃÂÄBCÇDEÉÈÊËFGHIÍÌÎÏJKLMNOÓÒÕÔÖPQRSTUÚÙÛÜVWXYZaáàãâäbcçdeéèêëfghiíìîïjklmnoóòõôöpqrstuúùûüvwxyz";
-		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 98", 98, m.calcular(texto));
+		Assert.assertEquals("2 x (tamanho - quantidade_caracteres(\"" + texto + "\")) deve ser 144", 144, m.calcular(texto));
 	}
 }
